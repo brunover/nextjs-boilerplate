@@ -25,8 +25,8 @@ import ${name} from '.'
 
 describe('<${name} />', () => {
   test('it should render correctly', () => {
-    const { asFragment } = render(<${name} />)
-    expect(asFragment()).toBeInTheDocument()
+    const { container } = render(<${name} />)
+    expect(container).toBeInTheDocument()
   })
 })
 `
