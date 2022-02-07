@@ -7,7 +7,11 @@ export type ${name}Props = {
 }
 
 const ${name} = ({ props }: ${name}Props) => {
-  return <S.Wrapper>TODO: ${name}</S.Wrapper>
+  return (
+    <S.Wrapper>
+      TODO: ${name}
+    </S.Wrapper>
+  )
 }
 
 export default ${name}
