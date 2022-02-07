@@ -5,6 +5,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "gc": "node .generate_component",
     "lint": "eslint src",
     "pre-commit": "lint-staged",
     "prepare": "husky install",
