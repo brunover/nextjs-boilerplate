@@ -1,3 +1,10 @@
+/**
+ * This is a component generator, to use just run:
+ *
+ * yarn gc COMPONENT_NAME
+ * or
+ * npm run gc COMPONENT_NAME
+ */
 const fs = require('fs')
 const { component, test, stylesheet } = require('./component_templates.js')
 
