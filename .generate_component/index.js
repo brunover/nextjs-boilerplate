@@ -14,7 +14,7 @@ if (!name) throw new Error('You must include a component name.')
 
 const dir = `./src/components/${name}/`
 
-console.log(`Creating component ${name} in: '${dir}'`)
+console.log(`Creating component '${name}' in: '${dir}'`)
 
 // throw an error if the file already exists
 if (fs.existsSync(dir))
@@ -30,7 +30,7 @@ function writeFileErrorHandler(err) {
 // component.tsx
 fs.writeFile(`${dir}/index.tsx`, component(name), writeFileErrorHandler)
 // style.ts
-fs.writeFile(`${dir}/styles.ts`, stylesheet(), writeFileErrorHandler)
+fs.writeFile(`${dir}/styles.tsx`, stylesheet(), writeFileErrorHandler)
 // test.tsx
 fs.writeFile(`${dir}/test.tsx`, test(name), writeFileErrorHandler)
 
