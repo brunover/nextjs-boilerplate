@@ -9,9 +9,15 @@ const fs = require('fs')
 const { component, test, stylesheet } = require('./component_templates.js')
 
 // grab component name from terminal argument
-const [name] = process.argv.slice(2)
+let [name] = process.argv.slice(2)
+
+// if there is no name, throw error
 if (!name) throw new Error('You must include a component name.')
 
+// capitalizes the component name
+name = name.charAt(0).toUpperCase() + name.slice(1)
+
+// output directory for the component
 const dir = `./src/components/${name}/`
 
 console.log(`Creating component '${name}' in: '${dir}'`)
